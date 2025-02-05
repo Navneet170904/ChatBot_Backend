@@ -70,9 +70,9 @@ const pool = mysql.createPool(DB_CONFIG);
 const genAI = new GoogleGenerativeAI(GOOGLE_API_KEY);
 const app = express();
 
-app.use(cors({
-  origin: "https://chat-bot-frontend-dun.vercel.app/"
-}));
+app.use(cors(
+  // origin: "https://chat-bot-frontend-dun.vercel.app/" 
+));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
